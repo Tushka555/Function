@@ -319,93 +319,63 @@ const reviews = [
 //          (1) causes the odometer in the object to be increased by the distance,
 //          (2) returns the updated value of the `odometer`.
 
-const carMaker = {
-  odometer: 200,
-  drive: 100,
-}
-console.log(`Odometer = ${carMaker.odometer+carMaker.drive}`);
-
-
-function carMarker(odometer) {
+function carMarker(Num) {
   return {
-    odometer: odometer,  // Initialize odometer from the argument
-    drive: function(distance) {
-      this.odometer += distance;  // Increase odometer by the distance driven
-      return this.odometer;  // Return the updated odometer value
-    }
+    odometer: Num,
+    drive: (Num2) => {
+      Num += Num2;
+      return Num;
+    },
   };
 }
-
-// Example usage:
-const myCar = carMarker(200);  // Initialize a car with an odometer reading of 200
-console.log(`Initial Odometer = ${myCar.odometer}`);  // Output: Initial Odometer = 200
-
-// Now drive the car for a distance of 100
-console.log(`Odometer after driving 100 miles = ${myCar.drive(100)}`);  // Output: Odometer after driving 100 miles = 300
-
-// Drive the car again for a distance of 50
-console.log(`Odometer after driving 50 miles = ${myCar.drive(50)}`);  // Output: Odometer after driving 50 miles = 350
-
-
-
-// */
-
-// function carMaker(/* code here */) {
-//   /* code here */
-// }
-
-// /*
-//   To get started:
-//   1. Remove the lines involving the removeThisToStart variable, so that the
-//      program doesn't exit early.
-//   2. Implement userCanAffordSofa
-// */
+console.log(carMarker(100).odometer);
+console.log(carMarker(100).drive(50));
 
 // // Exercise 13
 
-// let superChimpOne = {
-//   name: "Chad",
-//   species: "Chimpanzee",
-//   mass: 9,
-//   age: 6,
-//   astronautID: 1,
-//   move: move(),
-// };
-// let salamander = {
-//   name: "Lacey",
-//   species: "Axolotl Salamander",
-//   mass: 0.1,
-//   age: 5,
-//   astronautID: 10,
-//   move: move(),
-// };
-// let animal1 = {
-//   name: "Brad",
-//   species: "Chimpanzee",
-//   mass: 11,
-//   age: 6,
-//   astronautID: 5,
-//   move: move(),
-// };
-// let animal2 = {
-//   name: "Leroy",
-//   species: "Beagle",
-//   mass: 14,
-//   age: 5,
-//   astronautID: 7,
-//   move: move(),
-// };
-// let animal3 = {
-//   name: "Almina",
-//   species: "Tardigrade",
-//   mass: 0.0000000001,
-//   age: 1,
-//   astronautID: 3,
-//   move: move(),
-// };
-// function move() {
-//   return Math.round(Math.random() * 10);
-// }
+let superChimpOne = {
+  name: "Chad",
+  species: "Chimpanzee",
+  mass: 9,
+  age: 6,
+  astronautID: 1,
+  move: move(),
+};
+let salamander = {
+  name: "Lacey",
+  species: "Axolotl Salamander",
+  mass: 0.1,
+  age: 5,
+  astronautID: 10,
+  move: move(),
+};
+let animal1 = {
+  name: "Brad",
+  species: "Chimpanzee",
+  mass: 11,
+  age: 6,
+  astronautID: 5,
+  move: move(),
+};
+let animal2 = {
+  name: "Leroy",
+  species: "Beagle",
+  mass: 14,
+  age: 5,
+  astronautID: 7,
+  move: move(),
+};
+let animal3 = {
+  name: "Almina",
+  species: "Tardigrade",
+  mass: 0.0000000001,
+  age: 1,
+  astronautID: 3,
+  move: move(),
+};
+function move() {
+  return Math.round(Math.random() * 10);
+}
 // // After you have created the other object literals, add the astronautID property to each one.
 // //Create an array to hold the animal objects.
 
